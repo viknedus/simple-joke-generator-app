@@ -2,7 +2,8 @@
 
 Using [icndb.com](http://www.icndb.com) API for random joke generation. Other perks were added.
 
-Check it out [Here]
+Check it out [Here](https://simple-joke-generator-app.vercel.app/)
+
 ![Simple joke generator](/public/Screenshot.png)
 
 ## Want to fork and update app?
