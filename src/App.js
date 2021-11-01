@@ -2,7 +2,6 @@ import "./App.css";
 import { useRef, useState, useEffect } from "react";
 
 function App() {
-
   // custom hook
   function useRandomJoke(firstName, lastName) {
     const [joke, setJoke] = useState("");
@@ -25,8 +24,8 @@ function App() {
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("Elon");
+  const [lastName, setLastName] = useState("Musk");
 
   const joke = useRandomJoke(firstName, lastName);
 
@@ -39,13 +38,20 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>The Joke Generator</h1>
-        <p>{joke}</p>
-        <button onClick={() => window.location.reload(false)}>Click to generate new joke!</button>
-
+        <h2>{joke}</h2>
+        <button onClick={() => window.location.reload(false)}>
+          Click to generate new joke!
+        </button>
+        <p>
+          Enter your name below to generate jokes with your name in it. <br />{" "}
+          Default name is Elon Musk
+        </p>
         <form>
           <input placeholder="first name" ref={firstNameRef} />
           <input placeholder="last name" ref={lastNameRef} />
-          <button onClick={generateJoke}>Generate new Joke with your name in it, maybe</button>
+          <button onClick={generateJoke}>
+            Generate new Joke with your name in it
+          </button>
         </form>
       </header>
     </div>
